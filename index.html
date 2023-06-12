@@ -29,26 +29,60 @@
         <p>You <em>know</em> you want to.</p>
       </div>
       <div class="right-mid">
-        <div>Let's do this!</div>
+        <div class="form-label">Let's do this!</div>
         <form action="">
-          <label for="firstname">First Name</label>
-          <input type="text" name="firstname" id="" />
-          <label for="lastname">Last Name</label>
-          <input type="text" name="lastname" id="" />
-          <label for="email">Email</label>
-          <input type="email" name="email" id="" />
-          <label for="phone">Phone Number</label>
-          <input type="phone" name="phone" id="" />
-          <label for="password">Password</label>
-          <input type="password" name="password" id="" />
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" name="confirm-password" id="" />
+          <div class="input-group">
+            <div class="input">
+              <label for="firstname">First Name</label>
+              <input type="text" name="firstname" id="firstname" />
+            </div>
+            <div class="input">
+              <label for="lastname">Last Name</label>
+              <input type="text" name="lastname" id="lastname" />
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="input">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="input">
+              <label for="phone">Phone Number</label>
+              <input type="phone" name="phone" id="phone" />
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="input">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="error"
+                onchange="validatePass()"
+              />
+            </div>
+            <div class="input">
+              <label for="confirm-password">Confirm Password</label>
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+                class="error"
+                onchange="validatePass()"
+              />
+            </div>
+          </div>
+          <div class="validation-error" id="validation-notice">
+            * Passwords do not match
+          </div>
         </form>
       </div>
       <div class="right-bottom">
         <button>Create Account</button>
-        <div>Already have an account? <span>Log in</span></div>
+        <div>Already have an account? <span class="login">Log in</span></div>
       </div>
     </div>
+    <script src="validation.js"></script>
   </body>
 </html>
